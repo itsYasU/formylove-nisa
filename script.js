@@ -6,20 +6,20 @@ const loveSong = document.getElementById("loveSong");
 surpriseButton.addEventListener("click", () => {
   surpriseNote.classList.toggle("visible");
   surpriseButton.textContent = surpriseNote.classList.contains("visible")
-    ? "Hide the note"
-    : "Tap for a surprise";
+    ? "Sembunyikan pesan"
+    : "Klik untuk kejutan";
 });
 
 musicButton.addEventListener("click", () => {
   if (loveSong.paused) {
     loveSong.play();
-    musicButton.textContent = "Pause our song";
+    musicButton.textContent = "Jeda lagu kita";
   } else {
     loveSong.pause();
-    musicButton.textContent = "Play our song";
+    musicButton.textContent = "Putar lagu kita";
   }
 });
 
 loveSong.addEventListener("ended", () => {
-  musicButton.textContent = "Play our song";
+  musicButton.textContent = "Putar lagu kita";
 });
